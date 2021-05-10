@@ -85,7 +85,8 @@ const Patients = () => {
 
 
                     <ButtonUpdate patients={row}/>
-                    <Link to={{pathname: `/services/listNotes`, search: `?idpatients=${row.idpatients}`, search2: `?nom=${row.nom}`, search3: `?prenom=${row.prenom}`}} className="btn btn-secondary mr-2 mb-2">Notes</Link>
+                    {/*<Link to={{pathname: `/services/listNotes`, search: `?idpatients=${row.idpatients}`, search2: `?nom=${row.nom}`, search3: `?prenom=${row.prenom}`}} className="btn btn-secondary mr-2 mb-2">Notes</Link>*/}
+                    <Link to={{pathname: `/services/listNotes`, search: `?idpatients=${row.idpatients}&nom=${row.nom}&prenom=${row.prenom}`}} className="btn btn-secondary mr-2 mb-2">Notes</Link>
                     <ButtonDelete idPatient={row.idpatients}/>
                 </div>
             )

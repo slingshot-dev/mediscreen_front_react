@@ -16,8 +16,10 @@ const Planets = () => {
     const [planets, setPlanets] = useState([]);
     const {query, search, search2, search3} = useLocation();
         let idpatients = new URLSearchParams(search).get('idpatients');
-        let prenom = new URLSearchParams(search3).get('prenom');
-        let nom = new URLSearchParams(search2).get('nom');
+/*        let prenom = new URLSearchParams(search3).get('prenom');
+        let nom = new URLSearchParams(search2).get('nom');*/
+    let prenom = new URLSearchParams(search).get('prenom');
+    let nom = new URLSearchParams(search).get('nom');
 
     const columns = [{
         dataField: 'regId',

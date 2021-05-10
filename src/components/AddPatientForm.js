@@ -88,12 +88,17 @@ class MyForm extends React.Component {
                 />
                 <br/>
                 <br/>
-                <p>Genre:</p>
+{/*                <p>Genre:</p>
                 <input
                     type='text'
                     name='genre'
                     onChange={this.myChangeHandler}
-                />
+                />*/}
+                <p>Genre:</p>
+                <select name='genre' onChange={this.myChangeHandler}>
+                    <option value="F">Feminin</option>
+                    <option selected value="M">Masculin</option>
+                </select>
                 <br/>
                 <br/>
                 <p>Adresse:</p>
