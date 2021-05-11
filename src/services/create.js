@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import AddPatientForm from "../components/AddPatientForm";
-import UserTable from "../components/UserTable";
 
 
     const App = () => {

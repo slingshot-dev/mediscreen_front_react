@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import AddNotePatientForm from "../components/AddNotePatientForm";
 
-import UserTable from "../components/UserTable";
 import ListNotesPatientForm from "../components/ListNotesPatientForm";
 
 

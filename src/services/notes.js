@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import AddNotePatientForm from "../components/AddNotePatientForm";
 
-import UserTable from "../components/UserTable";
-
-
 const App = () => {
 
     return (
