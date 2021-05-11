@@ -9,11 +9,13 @@ import cellEditFactory, {Type} from 'react-bootstrap-table2-editor';
 import {BrowserRouter as Router, Link} from "react-router-dom";
 import ButtonUpdate from "./ButtonUpdate/ButtonUpdate";
 import ButtonDelete from "./ButtonDelete/ButtonDelete";
+import ButtonScore from "./ButtonScore/ButtonScore";
 
 
 const Patients = () => {
     const [hasError, setErrors] = useState(false);
     const [patients, setPatients] = useState([]);
+    const [setScore] = useState();
 
     const columns = [{
         dataField: 'idpatients',
@@ -82,12 +84,11 @@ const Patients = () => {
         formatter: (rowContent, row) => {
             return (
                 <div style={{ display: "flex"}}>
-
-
                     <ButtonUpdate patients={row}/>
-                    {/*<Link to={{pathname: `/services/listNotes`, search: `?idpatients=${row.idpatients}`, search2: `?nom=${row.nom}`, search3: `?prenom=${row.prenom}`}} className="btn btn-secondary mr-2 mb-2">Notes</Link>*/}
                     <Link to={{pathname: `/services/listNotes`, search: `?idpatients=${row.idpatients}&nom=${row.nom}&prenom=${row.prenom}`}} className="btn btn-secondary mr-2 mb-2">Notes</Link>
                     <ButtonDelete idPatient={row.idpatients}/>
+                    {/*<ButtonScore idPatient={row.idpatients}/>*/}
+                    <Link to={{pathname: `/services/score`, search: `?idpatients=${row.idpatients}&nom=${row.nom}&prenom=${row.prenom}`}} className="btn btn-secondary mr-2 mb-2">ReportScore</Link>
                 </div>
             )
         }
@@ -101,6 +102,7 @@ const Patients = () => {
             .then(res => setPatients(res))
             .catch(err => setErrors(err));
     }
+
 
     useEffect(() => {
         fetchData();

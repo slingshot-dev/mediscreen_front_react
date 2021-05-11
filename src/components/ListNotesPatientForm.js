@@ -14,12 +14,10 @@ import ButtonDeleteNote from "../ButtonDeleteNote/ButtonDeleteNote";
 const Planets = () => {
     const [hasError, setErrors] = useState(false);
     const [planets, setPlanets] = useState([]);
-    const {query, search, search2, search3} = useLocation();
+    const {query, search} = useLocation();
         let idpatients = new URLSearchParams(search).get('idpatients');
-/*        let prenom = new URLSearchParams(search3).get('prenom');
-        let nom = new URLSearchParams(search2).get('nom');*/
-    let prenom = new URLSearchParams(search).get('prenom');
-    let nom = new URLSearchParams(search).get('nom');
+        let prenom = new URLSearchParams(search).get('prenom');
+        let nom = new URLSearchParams(search).get('nom');
 
     const columns = [{
         dataField: 'regId',
@@ -48,7 +46,7 @@ const Planets = () => {
         formatter: (rowContent, row) => {
             return (
                 <div style={{ display: "flex"}}>
-                    <Link to={{pathname: `/services/notes`, search: `?patientId=${row.patientId}`, search2: `?nom=${nom}`, search3: `?prenom=${prenom}`}} className="btn btn-secondary mr-2 mb-2">Create</Link>
+                    {/*<Link to={{pathname: `/services/notes`, search: `?patientId=${row.patientId}`, search2: `?nom=${nom}`, search3: `?prenom=${prenom}`}} className="btn btn-secondary mr-2 mb-2">Create</Link>*/}
                     <ButtonUpdateNote note={row}/>
                     <ButtonDeleteNote regId={row.regId}/>
                 </div>
@@ -76,7 +74,7 @@ const Planets = () => {
                 <br></br>
                 <p className="Table-header"><font size={6}><strong> Patient : {prenom} {nom} </strong></font></p>
             </center>
-            {/*<p><font size={4}><strong>Creer une nouvelle Note: <Link to="/services/notes" className="btn btn-primary mr-2 mb-2">Create</Link></strong></font></p>*/}
+            <p><font size={4}><strong>Creer une nouvelle Note: <Link to={{pathname: `/services/notes`, search: `?patientId=${idpatients}&nom=${nom}&prenom=${prenom}`}} className="btn btn-secondary mr-2 mb-2">Create</Link></strong></font></p>
 
             <BootstrapTable
                 striped

@@ -63,6 +63,8 @@ class MyForm extends React.Component {
 
         return (
             <form onSubmit={this.mySubmitHandler}>
+                <br/>
+                <br/>
                 <h2>Patient:  {this.state.prenom} {this.state.nom}</h2>
                 <p>Nom: </p>
                 <input
@@ -88,19 +90,12 @@ class MyForm extends React.Component {
                 />
                 <br/>
                 <br/>
-{/*                <p>Genre:</p>
-                <input
-                    type='text'
-                    name='genre'
-                    onChange={this.myChangeHandler}
-                />*/}
-                <p>Genre:</p>
+                <p>Genre:
                 <select name='genre' onChange={this.myChangeHandler}>
                     <option value="F">Feminin</option>
                     <option selected value="M">Masculin</option>
-                </select>
-                <br/>
-                <br/>
+                </select></p>
+                 <br/>
                 <p>Adresse:</p>
                 <input
                     type='text'

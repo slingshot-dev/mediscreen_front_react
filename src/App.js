@@ -13,6 +13,7 @@ import Create from "./services/create";
 import About from "./About";
 import Notes from "./services/notes"
 import ListNotes from "./services/listNotes"
+import ReportScore from "./components/ReportScore";
 
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
                 </Route>
                 <Route exact path="/services/listNotes" component={Notes}>
                     <ListNotes/>
+                </Route>
+                <Route exact path="/services/score" component={ReportScore}>
+                    <ReportScore/>
                 </Route>
                 <Route exact path='/about' component={About}/>
             </Switch>

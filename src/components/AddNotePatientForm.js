@@ -10,8 +10,8 @@ function App() {
 
     const {query, search, search2, search3} = useLocation();
     let patientId = new URLSearchParams(search).get('patientId');
-    let nom = new URLSearchParams(search2).get('nom');
-    let prenom = new URLSearchParams(search3).get('prenom');
+    let nom = new URLSearchParams(search).get('nom');
+    let prenom = new URLSearchParams(search).get('prenom');
 
     const history = useHistory();
 
