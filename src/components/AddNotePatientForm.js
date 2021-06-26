@@ -31,18 +31,13 @@ function App() {
         }).then(response => {
             console.log(response.json());
         })
-
             .then(res => res.json())
-
             .catch(error => console.error('Error:', error))
-
             .then(response => console.log('Success:', response));
-
         history.push("/");
 
 
     }
-        // console.log(data);
 
 
     return (
@@ -63,96 +58,3 @@ function App() {
 
 }
 export default App;
-
-/*
-
-<input {...register('firstName')} /> {/!* register an input *!/}
-<input {...register('testtName')} /> {/!* register an input *!/}
-<input {...register('lastName', { required: true })} />
-{errors.lastName && <p>Last name is required.</p>}
-<input {...register('age', { pattern: /\d+/ })} />
-{errors.age && <p>Please enter number for age.</p>}
-*/
-
-
-
-
-/*class MyNoteForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            regId:'',
-            patientId:'',
-            note:''};
-    }
-
-
-
-    mySubmitHandler = (event) => {
-
-        const {match, location} = this.props;
-    let idpatients = this.props.match.params.idpatients;
-
-        event.preventDefault();
-        alert("Vous allez creer une nouvelle Note pour ce patient: " + this.state.patientId +" "+ this.state.note);
-
-        const data = { nom:this.state.patientId, prenom:this.state.note }
-
-        fetch(`localhost:8088/api/notes/add`, {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {"Content-type": "application/json; charset=UTF-8"}
-
-        }).then(response => {
-            console.log(response.json());
-        })
-
-            .then(res => res.json())
-
-            .catch(error => console.error('Error:', error))
-
-            .then(response => console.log('Success:', response));
-
-
-    }
-    myChangeHandler = (event) => {
-
-        let nam = event.target.name;
-        let val = event.target.value;
-
-        /!*        if (nam === "datenaissance") {
-                    if (!Number(val)) {
-                        alert("La date de Naissance doit etre renseignée");
-                    }
-                }*!/
-
-        this.setState({[nam]: val});
-    }
-    render() {
-        return (
-            <form onSubmit={this.mySubmitHandler}>
-                <h2>Patient:  {this.state.patientId} </h2>
-                <p>Note:  </p>
-{/!*                <input
-                    type='text'
-                    name='note'
-                    onChange={this.myChangeHandler}
-                />*!/}
-
-                <Form.TextArea
-                    name="note"
-                    style={{height: '200px', width: '1000px'}}
-                    placeholder='Tell us more about you...'
-                    onChange={this.myChangeHandler} />
-
-                <input
-                    type='submit'
-                    className="btn btn-primary"
-                />
-            </form>
-        );
-    }
-}
-
-ReactDOM.render(<MyNoteForm />, document.getElementById('root'));
-export default MyNoteForm;*/

@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Redirect} from "react-router-dom";
 import Home from "../Home";
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import {confirmAlert} from "react-confirm-alert";
 
 class MyForm extends React.Component {
     constructor(props) {
@@ -19,39 +21,155 @@ class MyForm extends React.Component {
 
     mySubmitHandler = (event) => {
         event.preventDefault();
-        alert("Vous allez creer un nouveau Patient: " + this.state.prenom +" "+ this.state.nom);
 
-         const data = { nom:this.state.nom, prenom:this.state.prenom , datenaissance:this.state.datenaissance , genre:this.state.genre , adresse:this.state.adresse , telephone:this.state.telephone}
+        var x = this.state.nom;
+        if (x === "") {
+            confirmAlert( {
+                title: 'Alert Message',
+                message: 'Le champs Nom doit etre rempli',
+                buttons: [
+                    {
+                        label: 'Ok',
+                    },
+                   ]
+            })
+            return false;
+        }
 
-         fetch(`/api/patients/add`, {
-             method: 'POST',
-             body: JSON.stringify(data),
-             headers: {"Content-type": "application/json; charset=UTF-8"}
+        var x = this.state.prenom;
+        if (x === "") {
+            confirmAlert( {
+                title: 'Alert Message',
+                message: 'Le champs Prenom doit etre rempli',
+                buttons: [
+                    {
+                        label: 'Ok',
+                    },
+                ]
+            })
+            return false;
+        }
 
-         }).then(response => {
-             console.log(response.json());
-         })
+        var x = this.state.datenaissance;
+        if (x === "") {
+            confirmAlert( {
+                title: 'Alert Message',
+                message: 'Le champs Date de Naissance doit etre rempli',
+                buttons: [
+                    {
+                        label: 'Ok',
+                    },
+                ]
+            })
+            return false;
+        }
 
-             .then(res => res.json())
+        var x = this.state.genre;
+        if (x === "") {
+            confirmAlert( {
+                title: 'Alert Message',
+                message: 'Le champs Genre doit etre rempli',
+                buttons: [
+                    {
+                        label: 'Ok',
+                    },
+                ]
+            })
+            return false;
+        }
 
-             .catch(error => console.error('Error:', error))
+        var x = this.state.adresse;
+        if (x === "") {
+            confirmAlert( {
+                title: 'Alert Message',
+                message: 'Le champs Adresse doit etre rempli',
+                buttons: [
+                    {
+                        label: 'Ok',
+                    },
+                ]
+            })
+            return false;
+        }
 
-             .then(response => console.log('Success:', response))
-             .then(() => this.setState({ redirection: true }));
+        var x = this.state.telephone;
+        if (x === "") {
+            confirmAlert( {
+                title: 'Alert Message',
+                message: 'Le champs Telephone doit etre rempli',
+                buttons: [
+                    {
+                        label: 'Ok',
+                    },
+                ]
+            })
+            return false;
+        }
+
+
+        confirmAlert({
+            title: 'Création du Patient :'+ this.state.prenom +" "+ this.state.nom,
+            message: 'confirmez envoi ?',
+            width: 800,
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => {
+                        fetch(`/api/patients/add`, {
+                            method: 'POST',
+                            body: JSON.stringify(data),
+                            headers: {"Content-type": "application/json; charset=UTF-8"}
+
+                        }).then(response => {
+                            console.log(response.json());
+                        })
+                            .then(res => res.json())
+                            .catch(error => console.error('Error:', error))
+                            .then(response => console.log('Success:', response))
+                            .then(() => this.setState({redirection: true}));
+                    }
+                },
+                {
+                    label: 'No',
+                }
+            ]
+        });
+
+        const data = { nom:this.state.nom, prenom:this.state.prenom , datenaissance:this.state.datenaissance , genre:this.state.genre , adresse:this.state.adresse , telephone:this.state.telephone}
+
 
     }
 
     myChangeHandler = (event) => {
-        let nam = event.target.name;
-        let val = event.target.value;
+        let name = event.target.name;
+        let value = event.target.value;
 
-/*        if (nam === "datenaissance") {
-            if (!Number(val)) {
-                alert("La date de Naissance doit etre renseignée");
+        if (name === "datenaissance") {
+            if (!(/^(19|20)\d\d[-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])/.test(value))) {
+                alert("Date de Naissance : Format non valide");
+
             }
-        }*/
+        }
 
-        this.setState({[nam]: val});
+        if (name === "nom") {
+            if (!(/^[a-zA-Z]+$/.test(value))) {
+                alert("Le Nom ne peut contenir que du texte")
+            }
+        }
+
+        if (name === "prenom") {
+            if (!(/^[a-zA-Z]+$/.test(value))) {
+                alert("Le Prenom ne peut contenir que du texte")
+            }
+        }
+
+        if (name === "telephone") {
+            if (!(/^(?:[\s-]*\d{2}){5}/.test(value))) {
+                alert("Telephone : Format non valide")
+            }
+        }
+
+        this.setState({[name]: value});
     }
     render() {
 
@@ -70,7 +188,7 @@ class MyForm extends React.Component {
                 <input
                     type='text'
                     name='nom'
-                    onChange={this.myChangeHandler}
+                    onBlur={this.myChangeHandler}
                 />
                 <br/>
                 <br/>
@@ -78,7 +196,7 @@ class MyForm extends React.Component {
                 <input
                     type='text'
                     name='prenom'
-                    onChange={this.myChangeHandler}
+                    onBlur={this.myChangeHandler}
                 />
                 <br/>
                 <br/>
@@ -86,21 +204,21 @@ class MyForm extends React.Component {
                 <input
                     type='text'
                     name='datenaissance'
-                    onChange={this.myChangeHandler}
+                    onBlur={this.myChangeHandler}
                 />
                 <br/>
                 <br/>
                 <p>Genre:
-                <select name='genre' onChange={this.myChangeHandler}>
-                    <option value="F">Feminin</option>
-                    <option selected value="M">Masculin</option>
-                </select></p>
-                 <br/>
+                    <select name='genre' defaultValue="M" onBlur={this.myChangeHandler}>
+                        <option value="F">Feminin</option>
+                        <option selected value="M">Masculin</option>
+                    </select></p>
+                <br/>
                 <p>Adresse:</p>
                 <input
                     type='text'
                     name='adresse'
-                    onChange={this.myChangeHandler}
+                    onBlur={this.myChangeHandler}
                 />
                 <br/>
                 <br/>
@@ -108,7 +226,7 @@ class MyForm extends React.Component {
                 <input
                     type='text'
                     name='telephone'
-                    onChange={this.myChangeHandler}
+                    onBlur={this.myChangeHandler}
                 />
                 <br/>
                 <br/>
@@ -122,5 +240,4 @@ class MyForm extends React.Component {
     }
 }
 
-ReactDOM.render(<MyForm />, document.getElementById('root'));
 export default MyForm;
