@@ -108,9 +108,8 @@ class MyForm extends React.Component {
 
 
         confirmAlert({
-            title: 'Création du Patient :'+ this.state.prenom +" "+ this.state.nom,
+            title: 'Créer Patient : '+ this.state.prenom +" "+ this.state.nom,
             message: 'confirmez envoi ?',
-            width: 800,
             buttons: [
                 {
                     label: 'Yes',
