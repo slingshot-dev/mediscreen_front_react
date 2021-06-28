@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6f40a15-f4c6-47a3-849a-b3d5871713af" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rLnc1JZuz7GWQ1GMO9GK5kuueg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MediscreenNotes" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6f40a15-f4c6-47a3-849a-b3d5871713af" name="Default Changelist" comment="" />
+      <created>1618764312837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618764312837</updated>
+      <workItem from="1618764314865" duration="1660000" />
+      <workItem from="1618766202601" duration="609000" />
+      <workItem from="1618910601194" duration="599000" />
+      <workItem from="1620649111641" duration="5271000" />
+      <workItem from="1620719185436" duration="21395000" />
+      <workItem from="1622191948232" duration="629000" />
+      <workItem from="1623051385068" duration="1236000" />
+      <workItem from="1623084436668" duration="608000" />
+      <workItem from="1623140812571" duration="611000" />
+      <workItem from="1623221162771" duration="1209000" />
+      <workItem from="1623482473353" duration="5936000" />
+      <workItem from="1623654493531" duration="8273000" />
+      <workItem from="1623738414390" duration="7179000" />
+      <workItem from="1624424306710" duration="1555000" />
+      <workItem from="1624690970813" duration="3013000" />
+      <workItem from="1624874051328" duration="1599000" />
+    </task>
+    <task id="LOCAL-00001" summary="Creation du router">
+      <created>1618764494713</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618764494713</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Creation du router">
+      <created>1618764703231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618764703231</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ajout Components et Services">
+      <created>1618764816486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618764816486</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajout Boutons Create, update, delete">
+      <created>1618764882229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618764882229</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Ajout Boutons CRUD note">
+      <created>1618764933150</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618764933150</updated>
+    </task>
+    <task id="LOCAL-00006" summary="corrections">
+      <created>1618765175310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618765175310</updated>
+    </task>
+    <task id="LOCAL-00007" summary="corrections listeNote - refresh &amp; ajout select dans input patient form">
+      <created>1620667917090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620667917090</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Ajout Bouton et Page Score">
+      <created>1620747612188</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620747612188</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Clean Code">
+      <created>1620747915765</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620747915765</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Boite de dialog custom + Clean Code">
+      <created>1624693739377</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624693739377</updated>
+    </task>
+    <task id="LOCAL-00011" summary="clean code">
+      <created>1624879330031</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624879330031</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creation du router" />
+    <MESSAGE value="Ajout Components et Services" />
+    <MESSAGE value="Ajout Boutons Create, update, delete" />
+    <MESSAGE value="Ajout Boutons CRUD note" />
+    <MESSAGE value="corrections" />
+    <MESSAGE value="corrections listeNote - refresh &amp; ajout select dans input patient form" />
+    <MESSAGE value="Ajout Bouton et Page Score" />
+    <MESSAGE value="Clean Code" />
+    <MESSAGE value="Boite de dialog custom + Clean Code" />
+    <MESSAGE value="clean code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean code" />
+  </component>
+</project>
